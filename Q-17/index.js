@@ -12,7 +12,7 @@ function checkNews() {
         result.innerHTML = "Please Enter both the fields"
     } else {
         if (source.value.toUpperCase() === "TELEGRAM" || source.value.toUpperCase() === "WHATSAPP" || source.value.toUpperCase() === "FACEBOOK" || source.value.toUpperCase() === "FB") {
-            result.innerHTML = "<h1>You should avoid this news Because it can be fake</h1>"
+            result.innerHTML = "<h1>Don't believe things on FB, Whatsapp and Telegram</h1>"
         } else {
             result.innerHTML = "<h1>You can beleive this news</h1>"
         }

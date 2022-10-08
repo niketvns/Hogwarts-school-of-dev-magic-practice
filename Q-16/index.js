@@ -1,22 +1,22 @@
-// Create two objects with name, age, and power as Ram, 2500, Treta. Krishna, 2325, Dwapar. Say if every character in name is worth 35 power points. Write a function which takes two objects and return the person with more power based on their name and power both. 
+// Create two objects with name, age, and power as Ram, 2500, Treta. Krishna, 2325, Dwapar. Say if every character in name is worth 35 power points. Write a function which takes two objects and return the person with more power based on their name and power both.
 
-let person1 = {
-    name: "Ram",
-    age: 30,
-    power: 4016
-}
-let person2 = {
-    name: "Krishna",
-    age: 31,
-    power: 4016
+let readLineSync = require('readline-sync')
+
+const person1 = {
+    name: readLineSync.question("Enter 1st person name: "),
+    power: readLineSync.question("Enter Power: "),
+    age: readLineSync.question("Enter age: ")
 }
 
-let person1Power;
-let person2Power;
+const person2 = {
+    name: readLineSync.question("\nEnter 2nd person name: "),
+    power: readLineSync.question("Enter Power: "),
+    age: readLineSync.question("Enter age: ")
+}
 
-function checkAge(person1, person2) {
-    person1Power = (person1.name.length) * 35 + person1.power;
-    person2Power = (person2.name.length) * 35 + person2.power;
+const checkPower = (person1, person2) => {
+    let person1Power = person1.name.length * 35 + person1.power;
+    let person2Power = person2.name.length * 35 + person2.power;
 
     if (person1Power > person2Power) {
         return person1;
@@ -25,10 +25,6 @@ function checkAge(person1, person2) {
     }
 }
 
-let greaterPowerPerson = checkAge(person1, person2);
+let greaterPowerPerson = checkPower(person1, person2)
 
-console.log(greaterPowerPerson.name + " has more power than " + (person1.name == greaterPowerPerson.name ? person2.name : person1.name))
-console.log("power of Ram is: " + person1Power)
-console.log("power of Krishna is: " + person2Power)
-
-
+console.log("\n\t", greaterPowerPerson.name, "is more powerfull")
