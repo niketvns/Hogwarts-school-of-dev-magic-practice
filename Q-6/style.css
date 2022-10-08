@@ -1,0 +1,23 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.container h3 {
+    font-size: 25px;
+}
+
+.container button {
+    font-size: 20px;
+    padding: 10px;
+    background-color: violet;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+}
+
+.container button:active {
+    transform: scale(0.9);
+    transition: 0.2s;
+}

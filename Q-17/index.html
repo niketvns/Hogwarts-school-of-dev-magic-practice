@@ -6,9 +6,52 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sample-17</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        button {
+            font-size: 20px;
+            padding: 10px;
+            border-radius: 10px;
+            border: 0.5px solid black;
+            cursor: pointer;
+            background-color: cadetblue;
+            color: white;
+        }
+
+        button:active {
+            transform: scale(0.9);
+            transition: 0.2s;
+            box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.6);
+        }
+
+        input,
+        textarea {
+            width: 250px;
+            height: 50px;
+            padding: 10px;
+            font-size: 18px;
+        }
+
+        textarea {
+            height: 100px;
+        }
+    </style>
 </head>
 
 <body>
+    <div class="container">
+        News <textarea name="news" id="news" cols="30" rows="5" placeholder="Enter your news"></textarea>
+        Source <input type="text" placeholder="Enter News Source">
+        <button>Check</button>
+        <div class="output" style="text-align: center;"></div>
+    </div>
+
 
     <script src="/Q-17/index.js"></script>
 
