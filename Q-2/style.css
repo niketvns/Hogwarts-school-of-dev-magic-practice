@@ -7,7 +7,9 @@
 body {
     height: 100vh;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
 }
 
 .container {
@@ -18,8 +20,13 @@ body {
 }
 
 .notice {
-    width: 60%;
+    width: 70%;
     margin: 30px;
+    background-color: cornflowerblue;
+    padding: 10px;
+    color: white;
+    border-radius: 10px;
+    text-align: center;
 }
 
 input {
